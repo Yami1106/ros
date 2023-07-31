@@ -1,4 +1,0 @@
-<launch>
-    <node name="sensorpub" pkg="rmp01" type="pub.py" output="screen"/>
-    <node name="sensorsub" pkg="rmp01" type="sub.py" output="screen"/>
-</launch>
