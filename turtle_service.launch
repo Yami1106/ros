@@ -1,6 +1,0 @@
-<launch>
-    <node name="turtlesim" pkg="turtlesim" type="turtlesim_node" output="screen"/>
-    <node name="turtle_service" pkg="rmp01" type="turtle_services.py" output="screen">
-        <arg name="side" default="1.0"/> 
-    </node>
-</launch>
