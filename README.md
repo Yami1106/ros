@@ -1,42 +1,63 @@
 <div align="center">
 
-<pre>
-╔═════════════╗
-║     💻  ros  💻     ║
-╚═════════════╝
-</pre>
+# ROS Autonomous Navigation Stack
 
-## Project Repository
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![ROS](https://img.shields.io/badge/ROS-22314E?style=for-the-badge&logo=ros&logoColor=white)](https://ros.org)
 
-
+*Differential drive and skid-steer robots with full autonomous navigation: SLAM, Gmapping, obstacle avoidance, and mapping — simulated in Gazebo.*
 
 </div>
 
 ---
 
-## About
+## Overview
 
-A Python project repository. See the source code for details.
+Built as part of the RigBetel Labs ROS Mentorship Program. Implements complete autonomous navigation stacks for two robot types from scratch, covering the full pipeline from sensor data to navigation decisions.
+
+---
+
+## Robots
+
+### Differential Drive Robot
+- Standard two-wheel drive with odometry
+- Sensor fusion from lidar + wheel encoders
+- Obstacle avoidance with reactive behaviours
+
+### Skid-Steer Robot
+- Four-wheel skid steering for indoor navigation
+- Higher stability and payload capacity
+- Tuned for confined-space mapping
+
+---
+
+## Navigation stack
+
+```
+Lidar + Odometry → Gmapping SLAM → Occupancy Grid Map
+                                 → AMCL Localisation
+                                 → Navigation planner (move_base)
+                                 → Obstacle avoidance → Motor commands
+```
 
 ---
 
 ## Features
 
-- See source code for details
+- **SLAM** with Gmapping — builds map while navigating
+- **Autonomous obstacle avoidance** using lidar data
+- **ROS pub-sub architecture** — modular, extensible node design
+- **Custom launch files** and parameter configurations
+- **Gazebo simulation** with realistic physics
 
 ---
 
-## Tech Stack
+## Tech stack
 
-_See source_
-
----
-
-## Author
-
-**Ashish (Yami1106)**
-[GitHub](https://github.com/Yami1106) · [Portfolio](https://yamiportfolio.netlify.app/)
+`Python` · `ROS (Noetic)` · `Gazebo` · `Gmapping` · `AMCL` · `move_base`
 
 ---
 
-*Generated with [Automate_contribution](https://github.com/Yami1106/Automate_contribution)*
+<div align="center">
+RigBetel Labs ROS Mentorship Program · <a href="https://github.com/Yami1106">Ashish Sukumar</a>
+</div>
